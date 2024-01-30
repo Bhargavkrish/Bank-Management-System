@@ -1,0 +1,139 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank Management System</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1em;
+        }
+
+        nav {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        nav a {
+            margin: 0 10px;
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #555;
+        }
+
+        section {
+            padding: 20px;
+        }
+
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            background-color: #333;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+<h4>Admin Login Successfull!</h4>
+    <header>
+        <h1>Choose The Operations:-</h1>
+    </header>
+
+    <nav>
+        <a href="BFetchCustData.jsp">Display Customer's</a>
+        <a href="BCustomerRegis.html">Add Customer</a>
+        <a href="BDeleteCustomer.jsp">Delete Customer</a>
+        
+        <a href="BBlockCustomer.jsp">Block Customer</a>
+        <a href="BUnBlockCustomer.jsp">UnBlock Customer</a>
+        <a href="Bmenu.html">Log-Out</a>
+    </nav>
+
+   
+
+    
+
+    <script>
+        function showLoginForm(userType) {
+            hideAllSections();
+            document.getElementById(`${userType}Login`).style.display = 'block';
+        }
+
+        function showSignupForm(userType) {
+            hideAllSections();
+            document.getElementById(`${userType}Signup`).style.display = 'block';
+        }
+
+        function hideAllSections() {
+            const sections = ['adminLogin', 'adminSignup', 'customerLogin', 'customerSignup'];
+            sections.forEach(section => {
+                document.getElementById(section).style.display = 'none';
+            });
+        }
+
+        document.getElementById('adminLoginForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            // Add logic for admin authentication here
+            // Redirect or perform other actions as needed
+        });
+
+        document.getElementById('adminSignupForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            // Add logic for admin signup here
+            // Redirect or perform other actions as needed
+        });
+
+        document.getElementById('customerLoginForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            // Add logic for customer authentication here
+            // Redirect or perform other actions as needed
+        });
+
+        document.getElementById('customerSignupForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            // Add logic for customer signup here
+            // Redirect or perform other actions as needed
+        });
+    </script>
+</body>
+</html>
